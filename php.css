@@ -1,0 +1,179 @@
+html,body
+{
+   height:100%;
+   width:100%;
+   margin: 0;
+   padding: 0;
+   background: linear-gradient(hwb(0 0% 100% / 0.6), hsla(0, 0%, 0%, 0.851)),
+   url("/netstar/Images/Logo/2.jpg") no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ }
+h1 
+ {
+   margin-top: 0;
+   width: max-content;
+   color: hsl(0, 100%, 51%);
+   font-size: 75px;
+   text-decoration:  underline;
+   display: flex;
+   justify-content: center;
+   position: relative;
+   top: -50%;
+ }
+ h4
+ {
+   margin: auto;
+   width: max-content;
+   color: cyan;
+   font-size: 20px;
+ }
+
+label 
+ {
+   margin:auto;
+   font-weight: bold;
+   color: white;
+   font-size: 2.0em;
+   display: block;
+ }
+main
+ {
+   margin: auto;
+   height:calc(100%);
+   width:calc(100%);
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   justify-content:center;
+ }
+seperator 
+ {
+   height: 12px;
+   display: block;
+ }
+input:focus 
+ { 
+   box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); 
+ }
+input
+ { 
+   width: 100%; 
+   margin-bottom: 10px; 
+   background: rgba(0, 0, 0, 0.6);
+   border: 2px;
+   outline: none;
+   padding: 10px;
+   font-size: 20px;
+   color: white;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+   border: 1px solid rgba(0,0,0,0.3);
+   border-radius: 4px;
+   box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+   -webkit-transition: box-shadow .5s ease;
+   -moz-transition: box-shadow .5s ease;
+    -o-transition: box-shadow .5s ease;
+   -ms-transition: box-shadow .5s ease;
+   transition: box-shadow .5s ease;
+ }
+
+a 
+ {
+  text-align: center;
+  text-decoration:none;
+  font-family:Arial;
+  display: block;
+  color: red;
+  display: flex;
+  position: absolute;
+  bottom: 5%;
+ }
+p
+{ 
+ color: green;
+}
+button {
+  
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #ff0000;
+  background: #11111100;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+button:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+button:active {
+  color: hsla(0, 0%, 0%, 0)
+ 
+}
+
+button:active:after {
+  background: transparent;
+}
+
+button:hover:before {
+  opacity: 1;
+}
+
+button:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111111cd;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+ h1 {
+  font-size: 5rem;
+  text-align: center;
+   font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+     from {
+      color: #fff;
+    text-shadow: 0 0 10px #ff4c4c, 0 0 20px #ff4c4c, 0 0 30px #ff4c4c, 0 0 40px #ff4c4c, 0 0 50px #ff4c4c, 0 0 60px #ff4c4c, 0 0 70px #ff4c4c, 0 0 90px #ff4c4c;
+  }
+  
+  to {
+     color: gray;
+    text-shadow: 0 0 20px #ff4c4c, 0 0 30px #ff4c4c, 0 0 40px #ff4c4c, 0 0 50px #ff4c4c, 0 0 60px #ff4c4c, 0 0 70px #ff4c4c, 0 0 80px #ff4c4c, 0 1 90px #ff4c4c;
+  }
+}
